@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Flat Button')),
+      body: Center(
+        child: FlatButton(
+          color: Colors.green,
+          textColor: Colors.grey,
+          padding: EdgeInsets.all(5.0),
+          splashColor: Colors.blueAccent,
+          //disabledColor: Colors.pink,
+          //disabledTextColor: Colors.deepOrange,
+          child: Text('Click Me'),
+          onPressed: () {},
+        ),
+      ),
+    );
+  }
+}
